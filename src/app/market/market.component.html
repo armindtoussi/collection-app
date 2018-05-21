@@ -3,7 +3,7 @@
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let c of collectables">
         <span class="badge">{{c.type}}</span>
-        <button class="btn btn-success" (click)="onAddToCollection()">Add to Collection</button>&nbsp;
+        <button class="btn btn-success" (click)="onAddToCollection(c)">Add to Collection</button>&nbsp;
         {{c.description}}
       </li>
     </ul>

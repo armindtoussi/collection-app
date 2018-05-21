@@ -1,5 +1,6 @@
 import { Component, OnInit }  from '@angular/core';
 import { CollectableService } from '../shared/collectable.service';
+import { Collectable }        from '../shared/collectable.model';
 
 @Component({
   selector: 'app-market',
@@ -7,7 +8,7 @@ import { CollectableService } from '../shared/collectable.service';
 })
 export class MarketComponent implements OnInit {
 
-  collectables = [];
+  collectables: Collectable[] = [];
 
   constructor(private _collectableService: CollectableService) { }
 
@@ -16,7 +17,7 @@ export class MarketComponent implements OnInit {
   }
 
 
-  onAddToCollection() {
-    
+  onAddToCollection(item: Collectable) {
+    this._collectableService.addToCollection(item);
   }
 }
