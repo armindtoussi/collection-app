@@ -5,19 +5,24 @@ import { NgModule }      from '@angular/core';
 import { AppComponent }        from './app.component';
 import { MarketComponent }     from './market/market.component';
 import { CollectionComponent } from './collection/collection.component';
+import { HeaderComponent }     from './header.component';
 
 //services 
 import { CollectableService } from './shared/collectable.service';
+
+import { routing } from './app.routing';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MarketComponent,
-    CollectionComponent
+    CollectionComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [
     CollectableService
